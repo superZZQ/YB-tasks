@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>填写考核表</title>
+    <meta name="renderer" content="webkit"> <!-- 360手机优先使用chrome内核 -->
+    <meta name="screen-orientation" content="portrait">  <!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">  <!-- QQ强制竖屏 -->
+    <meta name="browsermode" content="application">  <!-- UC浏览器应用模式 -->
+    <!--  <meta name="x5-page-mode" content="app">  -->  <!-- QQ应用模式 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"> <!-- 禁止百度转载页面加载流氓广告 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- 优先使用最高IE内核和chrome内核 -->
+    <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1.0,user-scalable=no">  <!-- 禁止用户修改网页大小 -->
+    <meta name="google" value="notranslate">  <!-- 禁用google翻译网页 -->
+    <meta name="robots" content="index,follow">  <!-- 网页搜索引擎方式 -->
+	<link rel="stylesheet" type="text/css" href="css/tea.css">
+</head>
+<body>
+    <div class="hd">
+        <img src="images/yiban.png" class="img1"> 
+    </div>
+
+    <input type="button" id="btn" value="" style="" >
+ <div class="all">  
+    <div id="nav" class="hd1">
+    	<ul>
+            <li><a id="a1" onclick="setTab('a',1,4)" class="curr" href="javascript:;">填写评价</a></li>
+            <li><a id="a2" onclick="setTab('a',2,4)" href="javascript:;">查看所有人上一次考核表</a></li>
+            <li><a id="a3" onclick="setTab('a',3,4)" href="javascript:;">查看一个人所有考核表</a></li>
+        </ul>   
+    </div>
+
+    <div id="con_a_1" class="cc">
+         <table border="1" cellspacing="0">
+        <caption>中南大学易班工作站绩效考核表</caption>
+        <tr class="tr1">
+            <th>姓名</th>
+            <td class="td1" name="姓名"></td>
+            <th>部门</th>
+            <td class="td2" name="部门"></td>
+            <th>职务</th>
+            <td class="td3" name="职务"></td>
+        </tr>
+        <tr class="tr2">
+            <th>部门常规工作</th>
+            <td colspan="5" name="部门常规工作"></td>
+        </tr>
+        <tr class="tr3">
+            <th rowspan="2">线上活动任务</th>
+            <td colspan="2">微信推送浏览数</td>
+            <td colspan="4" name="微信推送浏览数"></td>
+        </tr>
+        <tr class="tr4">
+            <td colspan="2">易班APP线上活动（包括轻应用、优课、微视频征集大赛等）</td>
+            <td colspan="4" name="线上活动"></td>
+        </tr>
+        <tr class="tr5">
+            <th>计划外工作</th>
+            <td colspan="5" name="计划外工作"></td>
+        </tr>
+        <tr class="tr6">
+            <th>工作计划/工作创新/工作想法</th>
+            <td colspan="5" name="工作计划"></td>
+        </tr>
+        <tr class="tr7">
+            <th>组长评价</th>
+            <td colspan="5" name="组长评价"></td>
+        </tr>
+        <tr class="tr8">
+            <th>部长意见</th>
+            <td colspan="5" name="部长意见"></td>
+        </tr>
+        <tr class="tr9">
+            <th>教师评价</th>
+            <td colspan="5" name="教师评价"><textarea name="教师评价"></textarea></td>
+        </tr>
+        <tr class="tr10">
+            <th>备注</th>
+            <td colspan="5" name="备注"></td>
+        </tr>
+    </table>
+     <p>
+<b>工资考核标准：</b><br></p>
+    <p id="p1">员工工资= 基本工资 + 绩工资 + 效工资 + 值班工资</p>
+<p><b>月绩效考核表填写说明：</b><br><br>
+1、此文件由每部门在编人员填写；<br>
+2、部门一栏填写说明：<br>
+部长填写本部门名称，部长外人员具体到组别，例如“办公室”等；<br>
+3、职务一栏填写说明：<br>
+有职务的填写“部长”“组长”等，没有职务的填写“试用员工”“正式员工”；<br>
+4、组内常规工作是填写每个月完成的本职工作，尽量描述详细，将作为员工工作量考核与工资量化的标准，计划外非常规工作是填写完成非本组本职工作，比如参与各类项目或未申报上项目的工作以及各种临时性工作。<br>
+5、普通员工的绩效考核表需先交由组长审核并由组长评定等级，组长评价直接按照章程评定等级，A（150元）、B（110元）、C（80元）、D（40）、E（0），部长意见可同意组长评价，也可提出修改意见；组长考核表直接交由部长审核，部长考核表需交由对应的指导老师审核。<br>
+6、文件以“绩效考核表-姓名年份.月份”命名，每月总结由部长汇总后提交人资组即可，无需打印。
+    </p>
+    <div class="button">
+        <button onclick="disp_prompt()">提交评价<a href=""></a></button>
+        <button>下一张表</button>
+    </div> 
+    </div>
+    <div id="con_a_2" class="cc" style="display: none;">
+    <div class="f1">
+    <table border="1" cellspacing="0">
+        <caption>中南大学易班工作站绩效考核表</caption>
+        <tr class="tr1">
+            <th>姓名</th>
+            <td class="td1" name="姓名"></td>
+            <th>部门</th>
+            <td class="td2" name="部门"></td>
+            <th>职务</th>
+            <td class="td3" name="职务"></td>
+        </tr>
+        <tr class="tr2">
+            <th>部门常规工作</th>
+            <td colspan="5" name="部门常规工作"></td>
+        </tr>
+        <tr class="tr3">
+            <th rowspan="2">线上活动任务</th>
+            <td colspan="2">微信推送浏览数</td>
+            <td colspan="4" name="微信推送浏览数"></td>
+        </tr>
+        <tr class="tr4">
+            <td colspan="2">易班APP线上活动（包括轻应用、优课、微视频征集大赛等）</td>
+            <td colspan="4" name="线上活动"></td>
+        </tr>
+        <tr class="tr5">
+            <th>计划外工作</th>
+            <td colspan="5" name="计划外工作"></td>
+        </tr>
+        <tr class="tr6">
+            <th>工作计划/工作创新/工作想法</th>
+            <td colspan="5" name="工作计划"></td>
+        </tr>
+        <tr class="tr7">
+            <th>组长评价</th>
+            <td colspan="5" name="组长评价"></td>
+        </tr>
+        <tr class="tr8">
+            <th>部长意见</th>
+            <td colspan="5" name="部长意见"></td>
+        </tr>
+        <tr class="tr9">
+            <th>教师评价</th>
+            <td colspan="5" name="教师评价"></td>
+        </tr>
+        <tr class="tr10">
+            <th>备注</th>
+            <td colspan="5" name="备注"></td>
+        </tr>
+    </table>
+    </div>
+<hr>
+    <div class="f2">
+    <table border="1" cellspacing="0">
+        <caption>中南大学易班工作站绩效考核表</caption>
+        <tr class="tr1">
+            <th>姓名</th>
+            <td class="td1" name="姓名"></td>
+            <th>部门</th>
+            <td class="td2" name="部门"></td>
+            <th>职务</th>
+            <td class="td3" name="职务"></td>
+        </tr>
+        <tr class="tr2">
+            <th>部门常规工作</th>
+            <td colspan="5" name="部门常规工作"></td>
+        </tr>
+        <tr class="tr3">
+            <th rowspan="2">线上活动任务</th>
+            <td colspan="2">微信推送浏览数</td>
+            <td colspan="4" name="微信推送浏览数"></td>
+        </tr>
+        <tr class="tr4">
+            <td colspan="2">易班APP线上活动（包括轻应用、优课、微视频征集大赛等）</td>
+            <td colspan="4" name="线上活动"></td>
+        </tr>
+        <tr class="tr5">
+            <th>计划外工作</th>
+            <td colspan="5" name="计划外工作"></td>
+        </tr>
+        <tr class="tr6">
+            <th>工作计划/工作创新/工作想法</th>
+            <td colspan="5" name="工作计划"></td>
+        </tr>
+        <tr class="tr7">
+            <th>组长评价</th>
+            <td colspan="5" name="组长评价"></td>
+        </tr>
+        <tr class="tr8">
+            <th>部长意见</th>
+            <td colspan="5" name="部长意见"></td>
+        </tr>
+        <tr class="tr9">
+            <th>教师评价</th>
+            <td colspan="5" name="教师评价"></td>
+        </tr>
+        <tr class="tr10">
+            <th>备注</th>
+            <td colspan="5" name="备注"></td>
+        </tr>
+    </table>
+    </div>
+<hr>
+    <div class="f3">
+    <table border="1" cellspacing="0">
+        <caption>中南大学易班工作站绩效考核表</caption>
+        <tr class="tr1">
+            <th>姓名</th>
+            <td class="td1" name="姓名"></td>
+            <th>部门</th>
+            <td class="td2" name="部门"></td>
+            <th>职务</th>
+            <td class="td3" name="职务"></td>
+        </tr>
+        <tr class="tr2">
+            <th>部门常规工作</th>
+            <td colspan="5" name="部门常规工作"></td>
+        </tr>
+        <tr class="tr3">
+            <th rowspan="2">线上活动任务</th>
+            <td colspan="2">微信推送浏览数</td>
+            <td colspan="4" name="微信推送浏览数"></td>
+        </tr>
+        <tr class="tr4">
+            <td colspan="2">易班APP线上活动（包括轻应用、优课、微视频征集大赛等）</td>
+            <td colspan="4" name="线上活动"></td>
+        </tr>
+        <tr class="tr5">
+            <th>计划外工作</th>
+            <td colspan="5" name="计划外工作"></td>
+        </tr>
+        <tr class="tr6">
+            <th>工作计划/工作创新/工作想法</th>
+            <td colspan="5" name="工作计划"></td>
+        </tr>
+        <tr class="tr7">
+            <th>组长评价</th>
+            <td colspan="5" name="组长评价"></td>
+        </tr>
+        <tr class="tr8">
+            <th>部长意见</th>
+            <td colspan="5" name="部长意见"></td>
+        </tr>
+        <tr class="tr9">
+            <th>教师评价</th>
+            <td colspan="5" name="教师评价"></td>
+        </tr>
+        <tr class="tr10">
+            <th>备注</th>
+            <td colspan="5" name="备注"></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+        <div id="con_a_3" class="cc" style="display: none;">
+          <div id="sel">
+            <form id="form2" name="diqu" method="post" action=""> 
+            部门：
+                <select name="one" size="1" onchange="dep(options.selectedIndex)"> 
+                    <option value="0">行政部</option> 
+                    <option value="1">宣传部</option> 
+                    <option value="2">运营部</option> 
+                    <option value="3">技术部</option> 
+                    </select> 
+            组别：
+                <select name="shi"> 
+                    <option value="绵阳">行政部</option> 
+                    <option value="成都">办公室</option> 
+                    <option value="德阳">策划组</option> 
+                    <option value="广元">人资组</option> 
+                </select> 
+            </form>
+          </div> 
+<table border="1" cellspacing="0">
+        <caption>中南大学易班工作站绩效考核表</caption>
+        <tr class="tr1">
+            <th>姓名</th>
+            <td class="td1" name="姓名"></td>
+            <th>部门</th>
+            <td class="td2" name="部门"></td>
+            <th>职务</th>
+            <td class="td3" name="职务"></td>
+        </tr>
+        <tr class="tr2">
+            <th>部门常规工作</th>
+            <td colspan="5" name="部门常规工作"></td>
+        </tr>
+        <tr class="tr3">
+            <th rowspan="2">线上活动任务</th>
+            <td colspan="2">微信推送浏览数</td>
+            <td colspan="4" name="微信推送浏览数"></td>
+        </tr>
+        <tr class="tr4">
+            <td colspan="2">易班APP线上活动（包括轻应用、优课、微视频征集大赛等）</td>
+            <td colspan="4" name="线上活动"></td>
+        </tr>
+        <tr class="tr5">
+            <th>计划外工作</th>
+            <td colspan="5" name="计划外工作"></td>
+        </tr>
+        <tr class="tr6">
+            <th>工作计划/工作创新/工作想法</th>
+            <td colspan="5" name="工作计划"></td>
+        </tr>
+        <tr class="tr10">
+            <th>备注</th>
+            <td colspan="5" name="备注"></td>
+        </tr>
+</table>    
+            <div id="djpd">等级评定：
+                <input type="radio" name="abcd" value="A">A
+                <input type="radio" name="abcd" value="B">B
+                <input type="radio" name="abcd" value="C">C
+                <input type="radio" name="abcd" value="D">D
+            </div> 
+        <table border="1" cellspacing="0">
+            <tr class="tr9">
+            <th>教师评价</th>
+            <td colspan="5" name="教师评价"><textarea name="教师评价"></textarea></td>
+             </tr>
+        </table>
+            <div class="button">   
+                <button onclick="disp_prompt()" style="width: 150px;">提交评价<a   href=""></a></button>
+            </div>
+    <div id="con_a_4" class="cc">
+
+    </div>
+</div> 
+    <script type="text/javascript" src=js/jquery-3.1.1.js></script>
+    <script type="text/javascript" src=js/2.js></script>
+</body>
+</html>
